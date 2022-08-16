@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Calculation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #amount-error {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl text-center m-10">
+        Welcome to your
+        <span class="text-lime-600 font-semibold"> Mooooooooney</span>
+      </h1>
+    </header>
+    <main>
+      <!-- amount error message -->
+      <section class="text-center m-10">
+        <small
+          id="amount-error"
+          class="bg-red-200 px-8 py-2 text-center rounded"
+        ></small>
+      </section>
+      <section class="bg-lime-100 w-9/12 mx-auto p-8 rounded">
+        <div class="grid grid-cols-3 gap-5">
+          <div class="bg-green-500 p-8 text-white rounded-xl">
+            <h3 class="text-xl">Deposit</h3>
+            <h1 class="text-4xl">$<span id="total-deposit">00</span></h1>
+          </div>
+          <div class="bg-sky-500 p-8 text-white rounded-xl">
+            <h3 class="text-xl">Withdrow</h3>
+            <h1 class="text-4xl">$<span id="total-withdrow">00</span></h1>
+          </div>
+          <div class="bg-violet-500 p-8 text-white rounded-xl">
+            <h3 class="text-xl">Total Balance</h3>
+            <h1 class="text-4xl">$<span id="total-balance">1240</span></h1>
+          </div>
+        </div>
+
+        <!-- withdrow and deposit -->
+        <div class="wihtdorw-deposit mt-12">
+          <div class="grid grid-cols-2 gap-5">
+            <div class="bg-purple-800 p-8 rounded-xl">
+              <h3 class="text-xl text-white my-2">Please deposit</h3>
+              <input
+                type="text"
+                class="p-2 w-9/12 block"
+                id="deposit"
+                placeholder="Deposit"
+              />
+              <button
+                class="bg-blue-500 py-1 px-5 mt-5 rounded text-white hover:bg-blue-600"
+                id="deposit-btn"
+              >
+                Deposit
+              </button>
+            </div>
+            <div class="bg-sky-800 p-8 rounded-xl">
+              <h3 class="text-xl text-white my-2">Please Withdrow</h3>
+              <input
+                type="text"
+                class="p-2 w-9/12 block"
+                id="withdrow"
+                placeholder="Withdrow"
+              />
+              <button
+                class="bg-blue-500 py-1 px-5 mt-5 rounded text-white hover:bg-blue-600"
+                id="withdrow-btn"
+              >
+                Withdrow
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- calling app.js -->
+    <script src="./js/deposit.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Calculation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #error-display {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl text-center m-10">
+        Welcome to your
+        <span class="text-lime-600 font-semibold"> baper bank</span>
+      </h1>
+    </header>
+    <main>
+      <section class="bg-lime-100 w-1/2 mx-auto p-8 rounded">
+        <small
+          class="bg-red-200 px-8 py-2 text-center rounded w-full"
+          id="error-display"
+        ></small>
+        <h2 class="text-start text-xl text-lime-600 mt-5">Login</h2>
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="w-9/12 block p-2 my-2"
+            placeholder="info@gmail.com"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="12345"
+            class="w-9/12 block p-2 my-2"
+          />
+
+          <button
+            type="submit"
+            value="Submit"
+            id="submit"
+            class="bg-lime-600 px-5 py-1 rounded text-white text-lg mt-5 cursor-pointer hover:bg-lime-700"
+          >
+            Login
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- calling app.js -->
+    <script src="./js/login.js"></script>
+  </body>
+</html>
